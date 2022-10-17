@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body style="background-color:black;">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center" style= "background-image: url(https://static.scientificamerican.com/sciam/cache/file/7B4F3D12-2083-457B-A709F561FC4E696D_source.jpg?w=590&h=800&8FDFA747-347A-478F-A928882AA095CDBA) ; background-size: 100%;">
+        <h1 style="color:white">Belly Button Biodiversity Dashboard</h1>
+        <p style="color:white">Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row">
+      <h3 class = "col-md-12 text-center" style="color:white">What does this dashboard display?</h3>
+      <p class= "col-md-12" style="color:white">The purpose of this dashboard is to visualize the results of the collection of bacterial samples from the bellybuttons of volunteers. Associated volunteers also had other demographic information about them collected, and it was also documented how frequently each patient washes their bellybutton. Based on these samples, the identity and quantity of different bacterial species were observed. This aims to give some insight into the factors that affect biodiversity in areas of the human body.</p>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well" style="background-color:deepskyblue">
+          <h5>Test Subject ID No.:</h5>
+          <select id="selDataset" onchange="optionChanged(this.value)">
+          
+          </select>
+          
+        </div>
+        <div class="panel panel-primary" style="background-color:deepskyblue">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5 text-center" style="background-color:black">
+        <div id="bar"></div>
+      </div>
+      <div class="col-md-2">
+        <div id="gauge"></div>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-10 text-center">
+        <div id="bubble"></div>
+      </div>
+      
+    </div>
+  </div>
+  <br>
+  <br>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="static/js/charts.js"></script>
+  <script src="static/data/samples.json"></script>
+  
+</body>
+
+</html>
